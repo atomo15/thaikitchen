@@ -13,8 +13,13 @@
 
 @media screen and (max-width: 500px) {
     h3 {
-        height: 25px;
+        height: 20px;
         font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        height: 40px;
         margin-top: 5px;
         margin-bottom: 10px;
     }
@@ -29,11 +34,33 @@
     }
 }
 
-.box {
-    position: static;
-    border-radius: 10;
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
-    -ms-border-radius: 10;
-    -o-border-radius: 10;
+
+/* Split the screen in half */
+
+.split {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
+}
+
+
+/* Control the left side */
+
+.left {
+    left: 0;
+    padding-left: 15%;
+    /* background-color: #111; */
+}
+
+
+/* Control the right side */
+
+.right {
+    right: 0;
+    padding-right: 15%;
+    /* background-color: red; */
 }
