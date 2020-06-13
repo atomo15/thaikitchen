@@ -4,12 +4,14 @@ var option_number = "";
 
 function show() {
     var x = document.getElementById("detail");
-    console.log(Number)
+    //console.log(Number)
     var i = 0;
     var output = "";
     while (Number[i] != null) {
-        output = output + Number[i] + "<br>";
-        option_number = option_number + '<option value="' + Number[i] + '">' + Number[i] + '</option>'
+        if (Number[i].includes(".")) {
+            output = output + Number[i] + "<br>";
+            option_number = option_number + '<option value="' + Number[i] + '">' + Number[i] + '</option>'
+        }
         i++;
     }
     x.innerHTML = '<select class="custom-select" id="numberoption" onchange="findbynumber()">' + option_number + "</select>";
@@ -22,8 +24,8 @@ function findbynumber() {
     var check = 0;
     var result = "";
     while (thMenu[index] != null) {
-        if (x == Number[index]) {
-            console.log(x + " " + thMenu[index]);
+        if (x == Number[index] && x.includes(".")) {
+            //console.log(x + " " + thMenu[index]);
             result = result + '<h2 style="background-color: orange;">' + thMenu[index] + "</h2><br>";
             check = 1;
         }
@@ -33,7 +35,7 @@ function findbynumber() {
     if (check == 0) {
         y.innerHTML = "<h6>No Result</h6>";
     } else {
-        console.log(result)
+        // console.log(result)
         y.innerHTML = result;
     }
 
