@@ -13,13 +13,16 @@
 
 @media screen and (max-width: 500px) {
     h3 {
-        height: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: auto;
         font-size: 12px;
         margin-top: 5px;
         margin-bottom: 10px;
     }
     h2 {
-        height: 40px;
+        height: auto;
+        padding-left: 1px;
         margin-top: 5px;
         margin-bottom: 10px;
     }
@@ -38,7 +41,7 @@
 /* Split the screen in half */
 
 .split {
-    height: 50%;
+    height: auto;
     width: 50%;
     position: fixed;
     z-index: 1;
