@@ -50,13 +50,42 @@ function findbyname() {
     var index = 0;
     var newstr = "";
     var output = "";
+    var saveindex = "";
     x.innerHTML = "";
     while (thMenu[index] != null) {
         newstr = thMenu[index].toUpperCase();
         //console.log(newinput + " vs " + newstr)
         if (newstr.includes(newinput) && Number[index].includes('.')) {
+            if (saveindex == "") {
+                saveindex = saveindex + index;
+            } else {
+                saveindex = saveindex + ":" + index;
+            }
+
             output = output + '<h2 style="background-color: orange;">' + Number[index] + " <br> " + thMenu[index] + " <br> " + enMenu[index] + " <br> " + price[index] + "</h2>";
             // console.log(thMenu[index])
+        }
+        index += 1;
+    }
+    var repeat = saveindex.split(":");
+    console.log(repeat.length)
+    index = 0;
+    var i = 0;
+    var check = 1;
+    while (enMenu[index] != null) {
+        check = 1;
+        newstr2 = enMenu[index].toUpperCase();
+        //console.log(newinput + " vs " + newstr)
+        if (newstr2.includes(newinput) && Number[index].includes('.')) {
+            for (i = 0; i < repeat.length; i++) {
+                if (repeat[i] == index) {
+                    check = 0;
+                    break;
+                }
+            }
+            if (check == 1) {
+                output = output + '<h2 style="background-color: yellow;">' + Number[index] + " <br> " + thMenu[index] + " <br> " + enMenu[index] + " <br> " + price[index] + "</h2>";
+            }
         }
         index += 1;
     }
