@@ -27,7 +27,7 @@ function findbynumber() {
     while (thMenu[index] != null) {
         if (x == Number[index] && x.includes(".")) {
             //console.log(x + " " + thMenu[index]);
-            result = result + '<h2 style="background-color: orange;">' + thMenu[index] + "</h2><br>";
+            result = result + '<h2 style="background-color: orange;">' + thMenu[index] + "</h2>";
             result = result + '<h2 style="background-color: orange;">' + enMenu[index] + "</h2><br>";
             check = 1;
         }

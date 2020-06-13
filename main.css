@@ -11,14 +11,26 @@
     -o-border-radius: 10;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     h3 {
+        height: 25px;
         font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .panel {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .panel {
+        height: 400px;
     }
 }
 
 .box {
-    position: relative;
+    position: static;
     border-radius: 10;
     -webkit-border-radius: 10;
     -moz-border-radius: 10;
