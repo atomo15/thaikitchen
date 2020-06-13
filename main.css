@@ -1,5 +1,6 @@
 .custom-select {
     background-color: aqua;
+    border-width: 10px;
     border: blue;
-    width: 20%;
+    width: 50%;
 }
