@@ -68,7 +68,7 @@ function findbyname() {
         index += 1;
     }
     var repeat = saveindex.split(":");
-    console.log(repeat.length)
+    //console.log(repeat.length)
     index = 0;
     var i = 0;
     var check = 1;
