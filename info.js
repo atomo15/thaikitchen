@@ -24,7 +24,7 @@ function findbynumber() {
     while (thMenu[index] != null) {
         if (x == Number[index]) {
             console.log(x + " " + thMenu[index]);
-            result = result + '<h6 style="background-color: orange;">' + thMenu[index] + "</h6><br>";
+            result = result + '<h2 style="background-color: orange;">' + thMenu[index] + "</h2><br>";
             check = 1;
         }
         index += 1;
