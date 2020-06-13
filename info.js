@@ -51,6 +51,7 @@ function findbyname() {
     var newstr = "";
     var output = "";
     var saveindex = "";
+    var checkprint = 0;
     x.innerHTML = "";
     while (thMenu[index] != null) {
         newstr = thMenu[index].toUpperCase();
@@ -64,6 +65,7 @@ function findbyname() {
 
             output = output + '<h2 style="background-color: orange;">' + Number[index] + " <br> " + thMenu[index] + " <br> " + enMenu[index] + " <br> " + price[index] + "</h2>";
             // console.log(thMenu[index])
+            checkprint = 1;
         }
         index += 1;
     }
@@ -85,9 +87,16 @@ function findbyname() {
             }
             if (check == 1) {
                 output = output + '<h2 style="background-color: yellow;">' + Number[index] + " <br> " + thMenu[index] + " <br> " + enMenu[index] + " <br> " + price[index] + "</h2>";
+                checkprint = 1;
             }
         }
         index += 1;
     }
-    x.innerHTML = output;
+
+    if (checkprint == 1) {
+        x.innerHTML = output;
+    } else {
+        x.innerHTML = '<h2 style="background-color: darkred;color: white;">' + "No Result for " + input + "</h2><br>";
+    }
+
 }
