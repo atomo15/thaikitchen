@@ -21,7 +21,7 @@ function show() {
 
 function findbynumber() {
     var x = document.getElementById("numberoption").value;
-    var y = document.getElementById("diaplaymenu");
+    var y = document.getElementById("displaymenu");
     var index = 0;
     var check = 0;
     var result = "";
@@ -37,11 +37,28 @@ function findbynumber() {
     }
 
     if (check == 0) {
-        y.innerHTML = "<h6>No Result</h6>";
+        y.innerHTML = "<h2>No Result</h2>";
     } else {
-        // console.log(result)
         y.innerHTML = result;
     }
+}
 
-    //console.log(x);
+function findbyname() {
+    var input = document.getElementById("userinput").value;
+    var newinput = input.toUpperCase();
+    var x = document.getElementById("displaymenu2");
+    var index = 0;
+    var newstr = "";
+    var output = "";
+    x.innerHTML = "";
+    while (thMenu[index] != null) {
+        newstr = thMenu[index].toUpperCase();
+        //console.log(newinput + " vs " + newstr)
+        if (newstr.includes(newinput) && Number[index].includes('.')) {
+            output = output + '<h2 style="background-color: orange;">' + Number[index] + " <br> " + thMenu[index] + " <br> " + enMenu[index] + " <br> " + price[index] + "</h2>";
+            // console.log(thMenu[index])
+        }
+        index += 1;
+    }
+    x.innerHTML = output;
 }

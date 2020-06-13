@@ -11,6 +11,19 @@
     -o-border-radius: 10;
 }
 
+.inputs {
+    background-color: aqua;
+    border-width: 10px;
+    border: blue;
+    border-radius: 50;
+    height: 35px;
+    width: 50%;
+    -webkit-border-radius: 50;
+    -moz-border-radius: 50;
+    -ms-border-radius: 50;
+    -o-border-radius: 50;
+}
+
 @media screen and (max-width: 500px) {
     h3 {
         padding-top: 5px;
@@ -41,12 +54,13 @@
 /* Split the screen in half */
 
 .split {
-    height: auto;
+    height: 85%;
     width: 50%;
     position: fixed;
     z-index: 1;
     top: 100px;
     overflow-x: hidden;
+    overflow-y: scroll;
     padding-top: 10;
 }
 
@@ -55,7 +69,8 @@
 
 .left {
     left: 0;
-    padding-left: 15%;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
     /* background-color: #111; */
 }
 
@@ -64,6 +79,7 @@
 
 .right {
     right: 0;
-    padding-right: 15%;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
     /* background-color: red; */
 }
