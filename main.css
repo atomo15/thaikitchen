@@ -2,11 +2,25 @@
     background-color: aqua;
     border-width: 10px;
     border: blue;
+    border-radius: 10;
     width: 50%;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    -ms-border-radius: 10;
+    -o-border-radius: 10;
 }
 
 @media screen and (max-width: 768px) {
     h3 {
         font-size: 12px;
     }
+}
+
+.box {
+    position: relative;
+    border-radius: 10;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    -ms-border-radius: 10;
+    -o-border-radius: 10;
 }
