@@ -54,11 +54,11 @@
 /* Split the screen in half */
 
 .split {
-    height: 85%;
+    height: 65%;
     width: 50%;
     position: fixed;
     z-index: 1;
-    top: 100px;
+    top: auto;
     overflow-x: hidden;
     overflow-y: scroll;
     padding-top: 10;
